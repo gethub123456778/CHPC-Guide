@@ -465,7 +465,7 @@ python process_data.py $input_file $output_file
 4. **Slow file transfers**
    - Use `rsync` instead of `scp`
    - Compress files before transfer
-   - Use `screen` or `tmux` for long transfers
+   - Use `screen` ,`fileZilla`or `tmux`  for long transfers
 
 ### Getting Help
 
@@ -511,6 +511,17 @@ module show <module>     # Show module details
 3. **Use parallel libraries** when available
 4. **Profile your code** to identify bottlenecks
 5. **Consider using GPUs** for suitable workloads
+
+## References
+
+- [CHPC Quick Start Guide](https://wiki.chpc.ac.za/quick:start)  
+  Official documentation for using modules and software on the CHPC supercomputer.
+
+- [Quantum ESPRESSO Input File Reference](https://www.quantum-espresso.org/Doc/INPUT_PW.html)  
+  The official documentation for Quantum ESPRESSO input file syntax and options.
+
+- [Quantum ESPRESSO Resources by Pranab Das](https://pranabdas.github.io/espresso/resources/)  
+  A curated collection of tutorials, scripts, and resources for Quantum ESPRESSO users.
 
 ---
 
