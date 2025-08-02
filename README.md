@@ -17,6 +17,12 @@ A comprehensive guide for using the Centre for High Performance Computing (CHPC)
   - [Parallel Computing](#parallel-computing)
   - [Data Management](#data-management)
   - [Performance Optimization](#performance-optimization)
+- [Hands-on Exercises](#hands-on-exercises)
+  - [Basic Operations](#basic-operations)
+  - [Data Analysis](#data-analysis)
+  - [Parallel Computing](#parallel-computing-1)
+  - [Scientific Computing](#scientific-computing)
+  - [Advanced Topics](#advanced-topics-1)
 - [Examples](#examples)
   - [Basic Job Scripts](#basic-job-scripts)
   - [Parallel Job Scripts](#parallel-job-scripts)
@@ -172,6 +178,38 @@ gprof ./my_program gmon.out
 module load intel/2020.4
 module load mkl/2020.4
 ```
+
+## Hands-on Exercises
+
+### Basic Operations
+- [First Login and Environment Setup](docs/hands-on/basic/first_login.md)
+- [File Management and Transfer](docs/hands-on/basic/file_management.md)
+- [Module System Usage](docs/hands-on/basic/module_system.md)
+- [Basic Job Submission](docs/hands-on/basic/job_submission.md)
+
+### Data Analysis
+- [Python Data Processing](docs/hands-on/data_analysis/python_analysis.md)
+- [R Statistical Analysis](docs/hands-on/data_analysis/r_analysis.md)
+- [Batch Processing Workflows](docs/hands-on/data_analysis/batch_processing.md)
+- [Data Visualization](docs/hands-on/data_analysis/visualization.md)
+
+### Parallel Computing
+- [OpenMP Programming](docs/hands-on/parallel/openmp_basics.md)
+- [MPI Programming](docs/hands-on/parallel/mpi_basics.md)
+- [Hybrid OpenMP/MPI](docs/hands-on/parallel/hybrid_computing.md)
+- [Performance Optimization](docs/hands-on/parallel/optimization.md)
+
+### Scientific Computing
+- [Molecular Dynamics](docs/hands-on/scientific/molecular_dynamics.md)
+- [Monte Carlo Simulations](docs/hands-on/scientific/monte_carlo.md)
+- [Machine Learning](docs/hands-on/scientific/machine_learning.md)
+- [Image Processing](docs/hands-on/scientific/image_processing.md)
+
+### Advanced Topics
+- [GPU Computing](docs/hands-on/advanced/gpu_computing.md)
+- [Big Data Processing](docs/hands-on/advanced/big_data.md)
+- [Workflow Automation](docs/hands-on/advanced/workflow_automation.md)
+- [Performance Profiling](docs/hands-on/advanced/profiling.md)
 
 ## Examples
 
