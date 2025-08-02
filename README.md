@@ -34,7 +34,7 @@ A comprehensive guide for using the Centre for High Performance Computing (CHPC)
 
 ```bash
 # Connect to CHPC cluster
-ssh username@login.chpc.ac.za
+ssh username@lengau.chpc.ac.za
 
 # Check available modules
 module avail
@@ -514,7 +514,7 @@ module show <module>     # Show module details
 
 ---
 
-**Note**: This guide is maintained by the CHPC user community. For official documentation, please refer to the [CHPC Wiki](https://wiki.chpc.ac.za).
+**Note**: This guide is supportive of the CHPC clustore . For official documentation, please refer to the [CHPC Wiki](https://wiki.chpc.ac.za).
 
 ## Contributing
 
