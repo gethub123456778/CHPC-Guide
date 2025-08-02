@@ -200,6 +200,8 @@ module load mkl/2020.4
 - [Performance Optimization](docs/hands-on/parallel/optimization.md)
 
 ### Scientific Computing
+- [Quantum ESPRESSO Calculations](docs/hands-on/scientific/quantum_espresso.md)
+- [Convergence Testing](docs/hands-on/scientific/convergence_testing.md)
 - [Molecular Dynamics](docs/hands-on/scientific/molecular_dynamics.md)
 - [Monte Carlo Simulations](docs/hands-on/scientific/monte_carlo.md)
 - [Machine Learning](docs/hands-on/scientific/machine_learning.md)
@@ -281,6 +283,142 @@ module load gcc/9.3.0
 
 export OMP_NUM_THREADS=8
 ./my_openmp_program
+```
+
+### Quantum ESPRESSO Job Scripts
+
+#### SCF Calculation
+
+```bash
+#!/bin/bash
+#PBS -P MATS1366
+#PBS -N QE_SCF
+#PBS -l select=2:ncpus=24:mpiprocs=24
+#PBS -l walltime=24:00:00
+#PBS -q normal
+#PBS -m be
+#PBS -M your.email@example.com
+
+module purge
+module load chpc/qespresso/7.0/parallel_studio/2020u1
+
+ulimit -s unlimited
+cd $PBS_O_WORKDIR
+
+lfs setstripe -d .
+lfs setstripe -c 12 ./
+
+mpirun -np 48 pw.x < scf_input.in > scf_output.out
+```
+
+#### DOS Calculation
+
+```bash
+#!/bin/bash
+#PBS -P MATS1366
+#PBS -N QE_DOS
+#PBS -l select=1:ncpus=24:mpiprocs=24
+#PBS -l walltime=02:00:00
+#PBS -q normal
+
+module purge
+module load chpc/qespresso/7.0/parallel_studio/2020u1
+
+ulimit -s unlimited
+cd $PBS_O_WORKDIR
+
+lfs setstripe -d .
+lfs setstripe -c 12 ./
+
+mpirun -np 24 dos.x < dos_input.in > dos_output.out
+```
+
+#### Projected DOS Calculation
+
+```bash
+#!/bin/bash
+#PBS -P MATS1366
+#PBS -N QE_PDOS
+#PBS -l select=1:ncpus=24:mpiprocs=24
+#PBS -l walltime=04:00:00
+#PBS -q normal
+
+module purge
+module load chpc/qespresso/7.0/parallel_studio/2020u1
+
+ulimit -s unlimited
+cd $PBS_O_WORKDIR
+
+lfs setstripe -d .
+lfs setstripe -c 12 ./
+
+mpirun -np 24 projwfc.x < projwfc_input.in > projwfc_output.out
+```
+
+#### Band Structure Calculation
+
+```bash
+#!/bin/bash
+#PBS -P MATS1366
+#PBS -N QE_Bands
+#PBS -l select=2:ncpus=24:mpiprocs=24
+#PBS -l walltime=12:00:00
+#PBS -q normal
+
+module purge
+module load chpc/qespresso/7.0/parallel_studio/2020u1
+
+ulimit -s unlimited
+cd $PBS_O_WORKDIR
+
+lfs setstripe -d .
+lfs setstripe -c 12 ./
+
+mpirun -np 48 pw.x < bands_input.in > bands_output.out
+```
+
+#### Phonon Calculation
+
+```bash
+#!/bin/bash
+#PBS -P MATS1366
+#PBS -N QE_Phonons
+#PBS -l select=2:ncpus=24:mpiprocs=24
+#PBS -l walltime=48:00:00
+#PBS -q normal
+
+module purge
+module load chpc/qespresso/7.0/parallel_studio/2020u1
+
+ulimit -s unlimited
+cd $PBS_O_WORKDIR
+
+lfs setstripe -d .
+lfs setstripe -c 12 ./
+
+mpirun -np 48 ph.x < phonon_input.in > phonon_output.out
+```
+
+#### Spin-Orbit Coupling Calculation
+
+```bash
+#!/bin/bash
+#PBS -P MATS1366
+#PBS -N QE_SOC
+#PBS -l select=2:ncpus=24:mpiprocs=24
+#PBS -l walltime=24:00:00
+#PBS -q normal
+
+module purge
+module load chpc/qespresso/7.0/parallel_studio/2020u1
+
+ulimit -s unlimited
+cd $PBS_O_WORKDIR
+
+lfs setstripe -d .
+lfs setstripe -c 12 ./
+
+mpirun -np 48 pw.x < soc_input.in > soc_output.out
 ```
 
 ### Data Processing Workflows
