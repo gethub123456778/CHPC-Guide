@@ -1,0 +1,10 @@
+
+&projwfc
+outdir = '/home/ztsegaye/lustre/workstation/wsse/wsse2'
+prefix = 'bwsse'
+    ngauss       = 0
+    degauss      = 0.036748
+    DeltaE       = 0.005
+    kresolveddos = .true.
+    filpdos      = 'wsse.k'
+/

@@ -1,0 +1,5 @@
+&BANDS
+prefix = 'bwsse'
+outdir = '/home/ztsegaye/lustre/workstation/wsse/wsse2'
+  filband = 'bbands_bands.dat'
+/

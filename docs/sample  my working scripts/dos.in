@@ -1,0 +1,14 @@
+&DOS
+prefix = 'wsse'
+ outdir = '/home/ztsegaye/lustre/workstation/wsse/sample/ecut/dos'
+fildos= 'dos9.dat'
+emin=-9.0
+emax=9.0
+deltaE=0.01
+degauss = 0.02
+
+/
+
+
+
+

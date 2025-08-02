@@ -1,0 +1,55 @@
+&CONTROL
+ calculation = 'nscf'
+ etot_conv_thr = 3.0d-05 !
+ forc_conv_thr = 1.0d-05
+ outdir = '/home/ztsegaye/lustre/workstation/wsse/wsse2'
+ prefix = 'bwsse'
+ pseudo_dir = '/home/ztsegaye/lustre/workstation/wsse/wsse2/pseudo'
+ tprnfor = .true.
+ tstress = .true.
+ verbosity = 'high'
+/
+&SYSTEM
+ degauss = 1.4699723600d-02
+ ecutwfc = 80
+ ecutrho = 1200
+ ibrav = 0
+ nat = 3
+ nosym = .false.
+ ntyp = 3
+occupations = 'fixed'
+ smearing = 'methfessel-paxton'
+ vdw_corr='grimme-d2'
+ nbnd=19
+/
+&ELECTRONS
+ conv_thr = 6.0000000000d-10
+ electron_maxstep = 80
+ mixing_beta = 4.0000000000d-01
+/
+&IONS
+ ion_dynamics = 'bfgs',
+ ion_positions = 'from_input'
+/
+&CELL
+ cell_parameters = 'bohr',
+ cell_dynamics = 'bfgs'
+/
+ATOMIC_SPECIES
+S    32.065 s_pbesol_v1.4.uspp.F.UPF
+Se   78.96 se_pbesol_v1.uspp.F.UPF
+W    183.84 w_pbesol_v1.2.uspp.F.UPF
+
+ATOMIC_POSITIONS (crystal)
+W             0.0000000000        0.0000000000        0.5047327054
+S             0.6666666700        0.3333333300        0.5878091351
+Se            0.6666666700        0.3333333300        0.4122774795
+
+K_POINTS automatic
+18 18 1 0 0 0
+CELL_PARAMETERS angstrom
+    3.2521423200     0.0000000000     0.0000000000
+   -1.6260711600     2.8164378658     0.0000000000
+    0.0000000000     0.0000000000    18.2324859800
+
+

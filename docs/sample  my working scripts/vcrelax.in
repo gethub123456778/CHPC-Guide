@@ -1,0 +1,61 @@
+
+&CONTROL
+  calculation = 'vc-relax'
+  etot_conv_thr = 3.0000000000d-05
+  forc_conv_thr = 1.0d-4
+    prefix = 'wsse'
+  outdir = '/home/ztsegaye/lustre/workstation/test/vcrelax/ecut'
+  pseudo_dir = '/home/ztsegaye/lustre/workstation/test/vcrelax/ecut'
+  tprnfor = .true.
+  tstress = .true.
+  verbosity = 'high'
+
+
+  /
+&SYSTEM
+ degauss =   1.4699723600d-02
+  ibrav = 4
+  a=3.184223
+  c=12.978282
+  ecutwfc = 35
+   ecutrho = 350
+
+  nat = 3
+  nosym = .false.
+  ntyp = 3
+  occupations = 'smearing'
+  smearing = 'cold'
+
+/
+&ELECTRONS
+  conv_thr=   6.0000000000d-10
+  electron_maxstep = 200
+  mixing_beta =   4.0000000000d-01
+
+
+
+  /
+  &IONS
+ ion_dynamics="bfgs"
+
+/
+&cell
+cell_dofree="all"
+cell_dynamics="bfgs"
+press=0.0
+press_conv_thr=0.5
+/
+ATOMIC_SPECIES
+S      32.065 s_pbesol_v1.4.uspp.F.UPF
+Se     78.96 se_pbesol_v1.uspp.F.UPF
+W      183.84 w_pbesol_v1.2.uspp.F.UPF
+
+ATOMIC_POSITIONS (crystal)
+W             0.6666666667        0.3333333333        0.7543900141
+Se            0.3333333333        0.6666666667        0.6220831971
+S             0.3333333333        0.6666666667        0.8735267888
+
+
+K_POINTS automatic
+12 12 3 0 0 0
+

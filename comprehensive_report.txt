@@ -1,0 +1,31 @@
+Quantum ESPRESSO Comprehensive Analysis Report
+==============================================
+
+Calculations Performed:
+1. Self-Consistent Field (SCF) calculation
+2. Non-SCF calculation for DOS
+3. Density of States (DOS) calculation
+4. Projected DOS (PDOS) calculation
+5. Band structure calculation
+6. Phonon calculation
+7. Phonon DOS calculation
+8. Spin-orbit coupling calculation
+
+Generated Files:
+- Electronic DOS plots
+- Band structure plots
+- Phonon DOS and dispersion plots
+- SOC comparison plots
+- Analysis reports
+
+Key Physical Properties:
+- Electronic band gap
+- Phonon frequencies and modes
+- Spin-orbit coupling effects
+- Density of states
+
+Next Steps:
+1. Analyze optical properties
+2. Calculate transport properties
+3. Study temperature effects
+4. Investigate strain effects
